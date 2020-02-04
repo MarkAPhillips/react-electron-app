@@ -1,15 +1,15 @@
 {
-  "name": "react-electron-survey",
+  "name": "react-electron-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Electron react boiler plate application",
+  "main": "dist/main.js",
   "scripts": {
-    "build:react": "webpack --mode development --config webpack.react.config.js",
-    "build": "webpack --mode development",
-    "start": "npm run build:react && npm run build && electron ./dist/main.js"
+    "build:ui": "webpack --mode development --config webpack.ui.config.js",
+    "build:electron": "webpack --mode development",
+    "build:app": "electron-packager . --overwrite",
+    "start": "npm run build:ui && npm run build:electron && electron ./dist/main.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Mark Phillips",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
